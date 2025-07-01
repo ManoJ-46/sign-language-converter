@@ -192,9 +192,10 @@ def predict_sign_realtime(frame, model, classes_reverse):
     #if os.path.exists(image_path):
         #return Image.open(image_path)
 def load_sign_image(letter):
-    image_path = f"alphabets/{letter}.jpg"
-    if os.path.exists(image_path):
-        return Image.open(image_path)
+    base_path = get_base_path()
+    image_path = base_path / "alphabets" / f"{letter}.jpg"
+    if image_path.exists():
+        return Image.open(str(image_path))
     else:
         img = Image.new('RGB', (200, 200), color='white')
         draw = ImageDraw.Draw(img)
