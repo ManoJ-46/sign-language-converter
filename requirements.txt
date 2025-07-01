@@ -7,3 +7,14 @@ pandas
 pillow
 numpy
 streamlit-TTS
+
+streamlit==1.35.0
+streamlit-webrtc==0.46.0
+streamlit-autorefresh==0.0.1
+mediapipe==0.10.7
+torch==2.0.1
+torchvision==0.15.2
+pandas==2.0.3
+pillow==10.0.0
+opencv-python-headless==4.8.0.76
+numpy==1.24.3
