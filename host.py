@@ -12,18 +12,13 @@ import cv2
 import time
 import mediapipe as mp
 import torch
-import pandas as pd
+import pandas as pdz
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 import os
 import base64
 import random
 from pathlib import Path
-
-# ───────────────────────── Path helper ─────────────────────────
-def get_base_path() -> Path:
-    """Return the directory where this script resides."""
-    return Path(__file__).parent
 
 from CNNModel import CNNModel
 
