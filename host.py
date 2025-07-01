@@ -18,6 +18,13 @@ from PIL import Image, ImageDraw, ImageFont
 import os
 import base64
 import random
+from pathlib import Path
+
+# ───────────────────────── Path helper ─────────────────────────
+def get_base_path() -> Path:
+    """Return the directory where this script resides."""
+    return Path(__file__).parent
+
 from CNNModel import CNNModel
 
 # Page config - keep exactly as original
@@ -180,6 +187,10 @@ def predict_sign_realtime(frame, model, classes_reverse):
     return frame, None
 
 # Sign image loader - unchanged
+#def load_sign_image(letter):
+    #image_path = f"alphabets/{letter}.jpg"
+    #if os.path.exists(image_path):
+        #return Image.open(image_path)
 def load_sign_image(letter):
     image_path = f"alphabets/{letter}.jpg"
     if os.path.exists(image_path):
